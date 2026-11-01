@@ -1,0 +1,14 @@
+{
+  "name": "offerlens",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Read the fine print before you sign: job-offer review built on the Clocked API (Extract, Decide, Fill, Verify, Protect).",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "dev": "node server.js",
+    "record": "node scripts/record-samples.mjs",
+    "test": "node --test test/*.test.js"
+  }
+}
