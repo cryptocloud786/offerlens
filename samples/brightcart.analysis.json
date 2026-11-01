@@ -1,0 +1,855 @@
+{
+ "terms": [
+  {
+   "key": "employer",
+   "label": "Employer",
+   "value": "BrightCart Technologies Pvt. Ltd",
+   "normalized": null,
+   "start": 2990,
+   "end": 3022,
+   "confidence": 0.909,
+   "expected": false
+  },
+  {
+   "key": "role",
+   "label": "Role",
+   "value": "Senior Backend Engineer",
+   "normalized": null,
+   "start": 342,
+   "end": 365,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "manager",
+   "label": "Reports to",
+   "value": "Arvind Menon",
+   "normalized": null,
+   "start": 492,
+   "end": 504,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "work_location",
+   "label": "Work location",
+   "value": "Bengaluru",
+   "normalized": null,
+   "start": 554,
+   "end": 563,
+   "confidence": 1,
+   "expected": true
+  },
+  {
+   "key": "base_salary",
+   "label": "Base pay",
+   "value": "INR 24,00,000",
+   "normalized": null,
+   "start": 720,
+   "end": 733,
+   "confidence": 0.915,
+   "expected": true
+  },
+  {
+   "key": "variable_pay",
+   "label": "Bonus / variable pay",
+   "value": "up to 30% of fixed salary",
+   "normalized": null,
+   "start": 847,
+   "end": 872,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "joining_bonus",
+   "label": "Joining / signing bonus",
+   "value": "INR 1,50,000",
+   "normalized": null,
+   "start": 945,
+   "end": 957,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "equity",
+   "label": "Equity",
+   "value": null,
+   "normalized": null,
+   "start": null,
+   "end": null,
+   "confidence": 0.99,
+   "expected": false
+  },
+  {
+   "key": "start_date",
+   "label": "Start date",
+   "value": "1 December 2026",
+   "normalized": {
+    "value": "2026-12-01",
+    "source": "derived",
+    "rule": "date_month_name",
+    "confidence": 1
+   },
+   "start": 1124,
+   "end": 1139,
+   "confidence": 1,
+   "expected": true
+  },
+  {
+   "key": "probation",
+   "label": "Probation",
+   "value": "six (6) months",
+   "normalized": null,
+   "start": 1185,
+   "end": 1199,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "notice_period",
+   "label": "Notice period",
+   "value": "90 days' written notice",
+   "normalized": null,
+   "start": 1437,
+   "end": 1460,
+   "confidence": 1,
+   "expected": true
+  },
+  {
+   "key": "non_compete",
+   "label": "Non-compete",
+   "value": "18 months",
+   "normalized": null,
+   "start": 2057,
+   "end": 2066,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "early_exit_cost",
+   "label": "Early-exit cost",
+   "value": "INR 2,00,000",
+   "normalized": null,
+   "start": 1789,
+   "end": 1801,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "paid_leave",
+   "label": "Paid leave",
+   "value": null,
+   "normalized": null,
+   "start": null,
+   "end": null,
+   "confidence": 0.973,
+   "expected": true
+  },
+  {
+   "key": "health_cover",
+   "label": "Health cover",
+   "value": "INR 5,00,000 family floater",
+   "normalized": null,
+   "start": 2573,
+   "end": 2600,
+   "confidence": 1,
+   "expected": true
+  },
+  {
+   "key": "working_hours",
+   "label": "Working hours",
+   "value": "9:30 am to 6:30 pm, Monday to Saturday",
+   "normalized": null,
+   "start": 1841,
+   "end": 1879,
+   "confidence": 1,
+   "expected": true
+  },
+  {
+   "key": "offer_deadline",
+   "label": "Reply by",
+   "value": "5 November 2026",
+   "normalized": {
+    "value": "2026-11-05",
+    "source": "derived",
+    "rule": "date_month_name",
+    "confidence": 1
+   },
+   "start": 2853,
+   "end": 2868,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "hr_contact",
+   "label": "Reply to",
+   "value": "Neha Kapoor",
+   "normalized": null,
+   "start": 2903,
+   "end": 2914,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "hr_email",
+   "label": "Reply email",
+   "value": "neha.kapoor@brightcart.example",
+   "normalized": null,
+   "start": 2940,
+   "end": 2970,
+   "confidence": 1,
+   "expected": false
+  }
+ ],
+ "checks": [
+  {
+   "key": "unpaid_extra_hours",
+   "label": "Unpaid extra hours",
+   "why": "Open-ended unpaid hours change your effective pay. Ask how often and whether there is comp-off.",
+   "p": 0.9956,
+   "band": "flag",
+   "evidence": [
+    {
+     "value": "You may be required to work additional hours, weekends and on-call shifts as business needs require, without additional compensation.",
+     "start": 1881,
+     "end": 2014,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "key": "transfer_at_will",
+   "label": "Transfer anywhere",
+   "why": "If location matters to you, ask for it to be fixed in writing or for relocation support.",
+   "p": 0.9954,
+   "band": "flag",
+   "evidence": [
+    {
+     "value": "Your place of work will be Bengaluru, although the Company may transfer you to any of its offices or client sites in India at its discretion.",
+     "start": 527,
+     "end": 668,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "key": "early_exit_penalty",
+   "label": "Pay to leave early",
+   "why": "Bonds and clawbacks make leaving expensive. Know the exact amount and whether it reduces over time.",
+   "p": 0.9952,
+   "band": "flag",
+   "evidence": [
+    {
+     "value": "A one-time joining bonus of INR 1,50,000 will be paid with your first salary; this joining bonus is repayable in full if you leave within 12 months of joining.",
+     "start": 917,
+     "end": 1076,
+     "confidence": 0.997
+    },
+    {
+     "value": "If you resign before completing 24 months, you will pay the Company liquidated damages of INR 2,00,000.",
+     "start": 1699,
+     "end": 1802,
+     "confidence": 1
+    },
+    {
+     "value": "Because the Company will invest in your training, you agree to remain in employment for a minimum of 24 months.",
+     "start": 1587,
+     "end": 1698,
+     "confidence": 0.189
+    }
+   ]
+  },
+  {
+   "key": "ip_overreach",
+   "label": "IP clause covers your own time",
+   "why": "This can capture side projects and open-source work. Ask for a personal-time carve-out.",
+   "p": 0.9948,
+   "band": "flag",
+   "evidence": [
+    {
+     "value": "All inventions, code and works you create during your employment, whether or not during working hours and whether or not using Company resources, shall belong exclusively to the Company.",
+     "start": 2303,
+     "end": 2489,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "key": "one_sided_changes",
+   "label": "Employer can change terms at will",
+   "why": "A unilateral-change clause means the numbers you sign today are not guaranteed.",
+   "p": 0.9942,
+   "band": "flag",
+   "evidence": [
+    {
+     "value": "The Company reserves the right to modify any terms of this offer and of your employment, including compensation and benefits, at any time with or without notice.",
+     "start": 2664,
+     "end": 2825,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "key": "extendable_probation",
+   "label": "Open-ended probation",
+   "why": "Probation is when you are easiest to let go. Ask for a fixed maximum and fair notice.",
+   "p": 0.9921,
+   "band": "flag",
+   "evidence": [
+    {
+     "value": "The Company may extend the probation period at its sole discretion.",
+     "start": 1201,
+     "end": 1268,
+     "confidence": 0.999
+    },
+    {
+     "value": "During probation, the Company may terminate your employment with 7 days' notice.",
+     "start": 1269,
+     "end": 1349,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "key": "broad_non_compete",
+   "label": "Broad non-compete",
+   "why": "A wide non-compete can block your next job. Ask to narrow its length, scope and geography.",
+   "p": 0.989,
+   "band": "flag",
+   "evidence": [
+    {
+     "value": "For 18 months after leaving the Company, you will not join or provide services to any company engaged in software, payments or e-commerce anywhere in India, and you will not solicit any employee or customer of the Company.",
+     "start": 2053,
+     "end": 2275,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "key": "discretionary_pay",
+   "label": "Pay at management's discretion",
+   "why": "Treat discretionary pay as zero when comparing offers, unless the criteria are written down.",
+   "p": 0.9877,
+   "band": "flag",
+   "evidence": [
+    {
+     "value": "In addition you are eligible for an annual performance bonus of up to 30% of fixed salary, paid at the sole discretion of management.",
+     "start": 783,
+     "end": 916,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "key": "notice_imbalance",
+   "label": "One-sided notice",
+   "why": "Long one-sided notice slows your next move and weakens your negotiating position.",
+   "p": 0.8636,
+   "band": "flag",
+   "evidence": [
+    {
+     "value": "The Company may, at its option, pay salary in lieu of notice; you may not buy out your notice period.",
+     "start": 1462,
+     "end": 1563,
+     "confidence": 0.953
+    }
+   ]
+  }
+ ],
+ "employment": {
+  "type": "choice",
+  "choice": "permanent",
+  "probabilities": {
+   "permanent": 0.9906,
+   "fixed_term": 0.0026,
+   "internship": 0.002,
+   "contractor": 0.002,
+   "not_established": 0.0028
+  },
+  "confidence": 0.9882
+ },
+ "risk": {
+  "type": "score",
+  "score": 2.8808,
+  "legend": {
+   "0": "Low: standard, candidate-friendly terms",
+   "1": "Moderate: a few clauses worth clarifying",
+   "2": "High: several clauses that shift significant risk onto the candidate",
+   "3": "Severe: terms that could trap or heavily penalise the candidate"
+  },
+  "probabilities": {
+   "0": 0.003,
+   "1": 0.0073,
+   "2": 0.0955,
+   "3": 0.8942
+  },
+  "confidence": 0.8589,
+  "levels": [
+   "Low: standard, candidate-friendly terms",
+   "Moderate: a few clauses worth clarifying",
+   "High: several clauses that shift significant risk onto the candidate",
+   "Severe: terms that could trap or heavily penalise the candidate"
+  ]
+ },
+ "next_step": {
+  "value": "Get legal advice before signing",
+  "confidence": 0.906,
+  "probabilities": {
+   "Sign as is": 0.007307175940927192,
+   "Sign after clarifying a few points": 0.012986263156608708,
+   "Negotiate before signing": 0.05025611633255199,
+   "Get legal advice before signing": 0.9294504445699121
+  }
+ },
+ "summary": {
+  "value": "Priya Raghavan is offered the position of Senior Backend Engineer starting 1 December 2026 with a fixed annual salary of INR 24,00,000 and a potential 30% performance bonus. The company may transfer her to any office or client site in India at its discretion. If she resigns before completing 24 months of employment, she must pay liquidated damages of INR 2,00,000",
+  "confidence": 0.9859482930193209,
+  "source": "generated"
+ },
+ "email": {
+  "subject": "Clarification regarding Offer of Employment – Senior Backend Engineer",
+  "body": "Dear Neha Kapoor,\n\nThank you for the offer for the Senior Backend Engineer position. I am excited about the opportunity to join BrightCart Technologies Pvt. Ltd. Before proceeding, I have a few questions regarding the terms:\n\n1. Regarding clause 6, will there be any compensation for additional hours, weekends, or on-call shifts?\n2. Regarding the place of work, can you clarify the extent of the Company's discretion to transfer me to other offices or client sites?\n3. Regarding clause 5, is the liquidated damages payment of INR 2,00,000 the only cost associated with leaving before 24 months?\n4. Regarding clause 8, does the intellectual property ownership extend to work created entirely on my own time and without Company resources?\n5. Regarding clause 10, what is the process for notifying employees when terms are modified?\n6. Regarding clause 3, is there a maximum limit on how long the probation period can be extended?\n7. Regarding clause 7, can you clarify the scope of the non-compete restriction across the software, payments, and e-commerce sectors in India?\n8. Regarding clause 1, is the annual performance bonus based on specific, predefined metrics?\n9. Regarding clause 4, why is the option to buy out the notice period only available to the Company and not to the employee?\n10. Could you please provide details regarding the paid leave policy, as it is not stated in the offer?\n\nBest regards,\n\nPriya Raghavan",
+  "to": "neha.kapoor@brightcart.example"
+ },
+ "verify": {
+  "model": "clocked-1.0",
+  "grounded": 0.9924,
+  "ungrounded": 0.0076,
+  "verdict": "grounded",
+  "threshold": 0.6,
+  "instructions_used": "custom",
+  "documents": [
+   {
+    "id": "offer",
+    "share": 1,
+    "share_of_answer": 0.9924,
+    "claims": [
+     0,
+     1,
+     2
+    ]
+   }
+  ],
+  "claims": [
+   {
+    "claim": "Priya Raghavan is offered the position of Senior Backend Engineer starting 1 December 2026 with a fixed annual salary of INR 24,00,000 and a potential 30% performance bonus.",
+    "kind": "claim",
+    "counted": true,
+    "weight": 0.4766,
+    "supported": 0.9928,
+    "contradicted": 0.0029,
+    "not_stated": 0.0022,
+    "not_a_claim": 0.0021,
+    "verdict": "supported",
+    "sources": {
+     "offer": 1
+    },
+    "source": "offer"
+   },
+   {
+    "claim": "The company may transfer her to any office or client site in India at its discretion.",
+    "kind": "claim",
+    "counted": true,
+    "weight": 0.2342,
+    "supported": 0.992,
+    "contradicted": 0.0028,
+    "not_stated": 0.0024,
+    "not_a_claim": 0.0027,
+    "verdict": "supported",
+    "sources": {
+     "offer": 1
+    },
+    "source": "offer"
+   },
+   {
+    "claim": "If she resigns before completing 24 months of employment, she must pay liquidated damages of INR 2,00,000",
+    "kind": "claim",
+    "counted": true,
+    "weight": 0.2893,
+    "supported": 0.9921,
+    "contradicted": 0.0031,
+    "not_stated": 0.0023,
+    "not_a_claim": 0.0025,
+    "verdict": "supported",
+    "sources": {
+     "offer": 1
+    },
+    "source": "offer"
+   },
+   {
+    "claim": "Dear Neha Kapoor,",
+    "kind": "acknowledgement",
+    "kinds": {
+     "acknowledgement": 0.5839712458681418,
+     "offer_or_question": 0.32155394291212863,
+     "pointer": 0.04335570817724152,
+     "meta": 0.051119103042488144
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0089,
+    "contradicted": 0.0095,
+    "not_stated": 0.0298,
+    "not_a_claim": 0.9517,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Thank you for the offer for the Senior Backend Engineer position.",
+    "kind": "acknowledgement",
+    "kinds": {
+     "acknowledgement": 0.8094152953841156,
+     "offer_or_question": 0.13911143253798072,
+     "pointer": 0.0204564449299406,
+     "meta": 0.031016827147963093
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0059,
+    "contradicted": 0.0072,
+    "not_stated": 0.0309,
+    "not_a_claim": 0.956,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "I am excited about the opportunity to join BrightCart Technologies Pvt.",
+    "kind": "acknowledgement",
+    "kinds": {
+     "acknowledgement": 0.896974372544611,
+     "offer_or_question": 0.06076348184440995,
+     "pointer": 0.015196558137290336,
+     "meta": 0.027065587473688715
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0209,
+    "contradicted": 0.017,
+    "not_stated": 0.1114,
+    "not_a_claim": 0.8507,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Regarding clause 6, will there be any compensation for additional hours, weekends, or on-call shifts?",
+    "kind": "offer_or_question",
+    "kinds": {
+     "acknowledgement": 0.037585440994343425,
+     "offer_or_question": 0.9449484513611739,
+     "pointer": 0.008350907810919541,
+     "meta": 0.009115199833563143
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0022,
+    "contradicted": 0.0028,
+    "not_stated": 0.0112,
+    "not_a_claim": 0.9838,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Regarding the place of work, can you clarify the extent of the Company's discretion to transfer me to other offices or client sites?",
+    "kind": "offer_or_question",
+    "kinds": {
+     "acknowledgement": 0.03764375394685917,
+     "offer_or_question": 0.9431822387679948,
+     "pointer": 0.009881520975032478,
+     "meta": 0.009292486310113568
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0166,
+    "contradicted": 0.0174,
+    "not_stated": 0.093,
+    "not_a_claim": 0.873,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Regarding clause 5, is the liquidated damages payment of INR 2,00,000 the only cost associated with leaving before 24 months?",
+    "kind": "offer_or_question",
+    "kinds": {
+     "acknowledgement": 0.04958158601676377,
+     "offer_or_question": 0.9338113861784884,
+     "pointer": 0.006756643591659719,
+     "meta": 0.00985038421308815
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0025,
+    "contradicted": 0.0036,
+    "not_stated": 0.0133,
+    "not_a_claim": 0.9806,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Regarding clause 8, does the intellectual property ownership extend to work created entirely on my own time and without Company resources?",
+    "kind": "offer_or_question",
+    "kinds": {
+     "acknowledgement": 0.013135850529737758,
+     "offer_or_question": 0.9728034948233028,
+     "pointer": 0.005132035280405746,
+     "meta": 0.00892861936655375
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0059,
+    "contradicted": 0.0125,
+    "not_stated": 0.0199,
+    "not_a_claim": 0.9617,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Regarding clause 10, what is the process for notifying employees when terms are modified?",
+    "kind": "offer_or_question",
+    "kinds": {
+     "acknowledgement": 0.015105142535661562,
+     "offer_or_question": 0.9660537553382182,
+     "pointer": 0.00986694775838833,
+     "meta": 0.008974154367731862
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0043,
+    "contradicted": 0.0056,
+    "not_stated": 0.0235,
+    "not_a_claim": 0.9666,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Regarding clause 3, is there a maximum limit on how long the probation period can be extended?",
+    "kind": "offer_or_question",
+    "kinds": {
+     "acknowledgement": 0.030612495617855093,
+     "offer_or_question": 0.9548279168517226,
+     "pointer": 0.006271223275534179,
+     "meta": 0.008288364254888096
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0045,
+    "contradicted": 0.0056,
+    "not_stated": 0.0349,
+    "not_a_claim": 0.9549,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Regarding clause 7, can you clarify the scope of the non-compete restriction across the software, payments, and e-commerce sectors in India?",
+    "kind": "offer_or_question",
+    "kinds": {
+     "acknowledgement": 0.46302248892373793,
+     "offer_or_question": 0.5186307335990782,
+     "pointer": 0.00864802927962841,
+     "meta": 0.009698748197555462
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0033,
+    "contradicted": 0.004,
+    "not_stated": 0.0205,
+    "not_a_claim": 0.9722,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Regarding clause 1, is the annual performance bonus based on specific, predefined metrics?",
+    "kind": "offer_or_question",
+    "kinds": {
+     "acknowledgement": 0.03332626326119596,
+     "offer_or_question": 0.9418657011713388,
+     "pointer": 0.009794976615171869,
+     "meta": 0.015013058952293335
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0072,
+    "contradicted": 0.0088,
+    "not_stated": 0.0438,
+    "not_a_claim": 0.9402,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Regarding clause 4, why is the option to buy out the notice period only available to the Company and not to the employee?",
+    "kind": "offer_or_question",
+    "kinds": {
+     "acknowledgement": 0.041428441456297864,
+     "offer_or_question": 0.9397823367917554,
+     "pointer": 0.0089684998393366,
+     "meta": 0.009820721912610155
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0073,
+    "contradicted": 0.0102,
+    "not_stated": 0.0505,
+    "not_a_claim": 0.9319,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Could you please provide details regarding the paid leave policy, as it is not stated in the offer?",
+    "kind": "offer_or_question",
+    "kinds": {
+     "acknowledgement": 0.20422118532181766,
+     "offer_or_question": 0.7663162147399531,
+     "pointer": 0.013233793891463884,
+     "meta": 0.016228806046765337
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0065,
+    "contradicted": 0.0085,
+    "not_stated": 0.144,
+    "not_a_claim": 0.841,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Best regards,",
+    "kind": "acknowledgement",
+    "kinds": {
+     "acknowledgement": 0.6841725453728074,
+     "offer_or_question": 0.19803232119999703,
+     "pointer": 0.04590902069945018,
+     "meta": 0.07188611272774541
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0049,
+    "contradicted": 0.0053,
+    "not_stated": 0.039,
+    "not_a_claim": 0.9508,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Priya Raghavan",
+    "kind": "acknowledgement",
+    "kinds": {
+     "acknowledgement": 0.8242842487913775,
+     "offer_or_question": 0.08992562761102893,
+     "pointer": 0.03010438735376621,
+     "meta": 0.05568573624382735
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0131,
+    "contradicted": 0.0163,
+    "not_stated": 0.1022,
+    "not_a_claim": 0.8684,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   }
+  ],
+  "unsupported_claims": [],
+  "not_claims": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17
+  ],
+  "weakest_claim": {
+   "index": 1,
+   "supported": 0.992
+  },
+  "timing": {
+   "read_ms": 220,
+   "total_ms": 223
+  }
+ },
+ "policy": {
+  "flag": 0.75,
+  "review": 0.35
+ },
+ "usage": [
+  {
+   "endpoint": "extract",
+   "credits": 9,
+   "modelMs": 219.54451,
+   "roundTripMs": 795
+  },
+  {
+   "endpoint": "decide",
+   "credits": 6,
+   "modelMs": 136.739227,
+   "roundTripMs": 778
+  },
+  {
+   "endpoint": "fill",
+   "credits": 75,
+   "modelMs": 1854.272453,
+   "roundTripMs": 3894
+  },
+  {
+   "endpoint": "grounding",
+   "credits": 7,
+   "modelMs": 155.830524,
+   "roundTripMs": 543
+  }
+ ],
+ "credits": 97,
+ "errors": [],
+ "recorded_at": "2026-10-31T17:36:44.795Z"
+}

@@ -1,0 +1,132 @@
+{
+ "anonymized_text": "BrightCart Technologies Pvt. Ltd.\n<ADDRESS>\n\nDate: 28 October 2026\nRef: <REFERENCE_NUMBER>\n\nTo,\nMs. <PERSON>\n<ADDRESS>\nMobile: <PHONE> | Email: <EMAIL>\nPAN: <GOVERNMENT_ID>\n\nSubject: Offer of Employment – Senior Backend Engineer\n\nDear <PERSON>,\n\nWe are pleased to offer you the position of Senior Backend Engineer in our Payments Platform team, reporting to <PERSON>, Engineering Manager. Your place of work will be Bengaluru, although the Company may transfer you to any of its offices or client sites in India at its discretion.\n\n1. Compensation. Your fixed annual salary will be INR 24,00,000 (Rupees Twenty-Four Lakh only), payable monthly. In addition you are eligible for an annual performance bonus of up to 30% of fixed salary, paid at the sole discretion of management. A one-time joining bonus of INR 1,50,000 will be paid with your first salary; this joining bonus is repayable in full if you leave within 12 months of joining.\n\n2. Joining date. Your date of joining will be 1 December 2026.\n\n3. Probation. You will be on probation for six (6) months. The Company may extend the probation period at its sole discretion. During probation, the Company may terminate your employment with 7 days' notice.\n\n4. Notice period. After confirmation, either party may terminate employment by giving 90 days' written notice. The Company may, at its option, pay salary in lieu of notice; you may not buy out your notice period.\n\n5. Service agreement. Because the Company will invest in your training, you agree to remain in employment for a minimum of 24 months. If you resign before completing 24 months, you will pay the Company liquidated damages of INR 2,00,000.\n\n6. Working hours. Standard hours are 9:30 am to 6:30 pm, Monday to Saturday. You may be required to work additional hours, weekends and on-call shifts as business needs require, without additional compensation.\n\n7. Non-compete and non-solicitation. For 18 months after leaving the Company, you will not join or provide services to any company engaged in software, payments or e-commerce anywhere in India, and you will not solicit any employee or customer of the Company.\n\n8. Intellectual property. All inventions, code and works you create during your employment, whether or not during working hours and whether or not using Company resources, shall belong exclusively to the Company.\n\n9. Benefits. You will be covered under the Company group health insurance policy (INR 5,00,000 family floater) and are eligible for Provident Fund as per law.\n\n10. General. The Company reserves the right to modify any terms of this offer and of your employment, including compensation and benefits, at any time with or without notice.\n\nThis offer is valid until 5 November 2026. Please sign and return a copy to <PERSON>, HR Business Partner, at <EMAIL> by that date.\n\nFor BrightCart Technologies Pvt. Ltd.\n<PERSON>\nHR Business Partner\n",
+ "entities": [
+  {
+   "type": "address",
+   "value": "4th Floor, Prestige Tech Park, Outer Ring Road, Bengaluru 560103",
+   "start": 34,
+   "end": 98,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "reference_number",
+   "value": "BCT/HR/OL/2026/1187",
+   "start": 127,
+   "end": 146,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "person",
+   "value": "Priya Raghavan",
+   "start": 156,
+   "end": 170,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "address",
+   "value": "Flat 12B, Lake View Apartments, Kondapur, Hyderabad 500084",
+   "start": 171,
+   "end": 229,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "phone",
+   "value": "+91 98480 22317",
+   "start": 238,
+   "end": 253,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "email",
+   "value": "priya.raghavan@examplemail.com",
+   "start": 263,
+   "end": 293,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "government_id",
+   "value": "ABCPR1234K",
+   "start": 299,
+   "end": 309,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "person",
+   "value": "Priya",
+   "start": 372,
+   "end": 377,
+   "confidence": 0.99,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "person",
+   "value": "Arvind Menon",
+   "start": 492,
+   "end": 504,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "person",
+   "value": "Neha Kapoor",
+   "start": 2903,
+   "end": 2914,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 2
+  },
+  {
+   "type": "email",
+   "value": "neha.kapoor@brightcart.example",
+   "start": 2940,
+   "end": 2970,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "person",
+   "value": "Neha Kapoor",
+   "start": 3024,
+   "end": 3035,
+   "confidence": 1,
+   "source": "deny_list",
+   "mentions": 2
+  }
+ ],
+ "counts": {
+  "address": 2,
+  "reference_number": 1,
+  "person": 5,
+  "phone": 1,
+  "email": 2,
+  "government_id": 1
+ },
+ "first_name_mentions_masked": 0,
+ "usage": [
+  {
+   "endpoint": "pii",
+   "credits": 17,
+   "modelMs": 408.080872,
+   "roundTripMs": 624
+  }
+ ],
+ "credits": 17,
+ "recorded_at": "2026-10-31T17:36:44.795Z"
+}

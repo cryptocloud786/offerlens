@@ -1,0 +1,561 @@
+{
+ "terms": [
+  {
+   "key": "employer",
+   "label": "Employer",
+   "value": "LAUNCHPAD STUDIO LTD",
+   "normalized": null,
+   "start": 0,
+   "end": 20,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "role",
+   "label": "Role",
+   "value": "Product Designer",
+   "normalized": null,
+   "start": 203,
+   "end": 219,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "manager",
+   "label": "Reports to",
+   "value": null,
+   "normalized": null,
+   "start": null,
+   "end": null,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "work_location",
+   "label": "Work location",
+   "value": "London",
+   "normalized": null,
+   "start": 329,
+   "end": 335,
+   "confidence": 0.805,
+   "expected": false
+  },
+  {
+   "key": "base_salary",
+   "label": "Base pay",
+   "value": "GBP 4,800",
+   "normalized": null,
+   "start": 394,
+   "end": 403,
+   "confidence": 0.999,
+   "expected": true
+  },
+  {
+   "key": "variable_pay",
+   "label": "Bonus / variable pay",
+   "value": "completion bonus",
+   "normalized": null,
+   "start": 656,
+   "end": 672,
+   "confidence": 0.999,
+   "expected": false
+  },
+  {
+   "key": "joining_bonus",
+   "label": "Joining / signing bonus",
+   "value": null,
+   "normalized": null,
+   "start": null,
+   "end": null,
+   "confidence": 0.981,
+   "expected": false
+  },
+  {
+   "key": "equity",
+   "label": "Equity",
+   "value": null,
+   "normalized": null,
+   "start": null,
+   "end": null,
+   "confidence": 0.967,
+   "expected": false
+  },
+  {
+   "key": "start_date",
+   "label": "Start date",
+   "value": "4 January 2027",
+   "normalized": {
+    "value": "2027-01-04",
+    "source": "derived",
+    "rule": "date_month_name",
+    "confidence": 1
+   },
+   "start": 272,
+   "end": 286,
+   "confidence": 1,
+   "expected": true
+  },
+  {
+   "key": "probation",
+   "label": "Probation",
+   "value": null,
+   "normalized": null,
+   "start": null,
+   "end": null,
+   "confidence": 0.993,
+   "expected": false
+  },
+  {
+   "key": "notice_period",
+   "label": "Notice period",
+   "value": "30 days' written notice",
+   "normalized": null,
+   "start": 929,
+   "end": 952,
+   "confidence": 1,
+   "expected": true
+  },
+  {
+   "key": "non_compete",
+   "label": "Non-compete",
+   "value": "while this contract is running",
+   "normalized": null,
+   "start": 1230,
+   "end": 1260,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "early_exit_cost",
+   "label": "Early-exit cost",
+   "value": null,
+   "normalized": null,
+   "start": null,
+   "end": null,
+   "confidence": 0.993,
+   "expected": false
+  },
+  {
+   "key": "paid_leave",
+   "label": "Paid leave",
+   "value": null,
+   "normalized": null,
+   "start": null,
+   "end": null,
+   "confidence": 0.938,
+   "expected": false
+  },
+  {
+   "key": "health_cover",
+   "label": "Health cover",
+   "value": null,
+   "normalized": null,
+   "start": null,
+   "end": null,
+   "confidence": 0.994,
+   "expected": false
+  },
+  {
+   "key": "working_hours",
+   "label": "Working hours",
+   "value": "around 40 hours a week",
+   "normalized": null,
+   "start": 718,
+   "end": 740,
+   "confidence": 0.999,
+   "expected": true
+  },
+  {
+   "key": "offer_deadline",
+   "label": "Reply by",
+   "value": "20 November 2026",
+   "normalized": {
+    "value": "2026-11-20",
+    "source": "derived",
+    "rule": "date_month_name",
+    "confidence": 1
+   },
+   "start": 1396,
+   "end": 1412,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "hr_contact",
+   "label": "Reply to",
+   "value": "Hannah Lee",
+   "normalized": null,
+   "start": 1460,
+   "end": 1470,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "hr_email",
+   "label": "Reply email",
+   "value": "hannah@launchpad.example",
+   "normalized": null,
+   "start": 1472,
+   "end": 1496,
+   "confidence": 1,
+   "expected": false
+  }
+ ],
+ "checks": [
+  {
+   "key": "discretionary_pay",
+   "label": "Pay at management's discretion",
+   "why": "Treat discretionary pay as zero when comparing offers, unless the criteria are written down.",
+   "p": 0.9513,
+   "band": "flag",
+   "evidence": [
+    {
+     "value": "Depending on how the year goes for the company, we may also pay a completion bonus at the end of the contract.",
+     "start": 590,
+     "end": 700,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "key": "unpaid_extra_hours",
+   "label": "Unpaid extra hours",
+   "why": "Open-ended unpaid hours change your effective pay. Ask how often and whether there is comp-off.",
+   "p": 0.6946,
+   "band": "review",
+   "evidence": [
+    {
+     "value": "Ahead of big launches you may occasionally be asked to put in extra time, and we'll try to give time back afterwards where we can.",
+     "start": 742,
+     "end": 872,
+     "confidence": 1
+    }
+   ]
+  },
+  {
+   "key": "ip_overreach",
+   "label": "IP clause covers your own time",
+   "why": "This can capture side projects and open-source work. Ask for a personal-time carve-out.",
+   "p": 0.0053,
+   "band": "clear"
+  },
+  {
+   "key": "broad_non_compete",
+   "label": "Broad non-compete",
+   "why": "A wide non-compete can block your next job. Ask to narrow its length, scope and geography.",
+   "p": 0.0037,
+   "band": "clear"
+  },
+  {
+   "key": "notice_imbalance",
+   "label": "One-sided notice",
+   "why": "Long one-sided notice slows your next move and weakens your negotiating position.",
+   "p": 0.0028,
+   "band": "clear"
+  },
+  {
+   "key": "extendable_probation",
+   "label": "Open-ended probation",
+   "why": "Probation is when you are easiest to let go. Ask for a fixed maximum and fair notice.",
+   "p": 0.0028,
+   "band": "clear"
+  },
+  {
+   "key": "early_exit_penalty",
+   "label": "Pay to leave early",
+   "why": "Bonds and clawbacks make leaving expensive. Know the exact amount and whether it reduces over time.",
+   "p": 0.0027,
+   "band": "clear"
+  },
+  {
+   "key": "one_sided_changes",
+   "label": "Employer can change terms at will",
+   "why": "A unilateral-change clause means the numbers you sign today are not guaranteed.",
+   "p": 0.0024,
+   "band": "clear"
+  },
+  {
+   "key": "transfer_at_will",
+   "label": "Transfer anywhere",
+   "why": "If location matters to you, ask for it to be fixed in writing or for relocation support.",
+   "p": 0.0021,
+   "band": "clear"
+  }
+ ],
+ "employment": {
+  "type": "choice",
+  "choice": "contractor",
+  "probabilities": {
+   "permanent": 0.0137,
+   "fixed_term": 0.3459,
+   "internship": 0.012,
+   "contractor": 0.6174,
+   "not_established": 0.011
+  },
+  "confidence": 0.5217
+ },
+ "risk": {
+  "type": "score",
+  "score": 0.7836,
+  "legend": {
+   "0": "Low: standard, candidate-friendly terms",
+   "1": "Moderate: a few clauses worth clarifying",
+   "2": "High: several clauses that shift significant risk onto the candidate",
+   "3": "Severe: terms that could trap or heavily penalise the candidate"
+  },
+  "probabilities": {
+   "0": 0.2376,
+   "1": 0.7439,
+   "2": 0.0157,
+   "3": 0.0028
+  },
+  "confidence": 0.6586,
+  "levels": [
+   "Low: standard, candidate-friendly terms",
+   "Moderate: a few clauses worth clarifying",
+   "High: several clauses that shift significant risk onto the candidate",
+   "Severe: terms that could trap or heavily penalise the candidate"
+  ]
+ },
+ "next_step": {
+  "value": "Sign after clarifying a few points",
+  "confidence": 0.425,
+  "probabilities": {
+   "Sign as is": 0.008404969085249226,
+   "Sign after clarifying a few points": 0.5685412096929789,
+   "Negotiate before signing": 0.35843843018486155,
+   "Get legal advice before signing": 0.06461539103691033
+  }
+ },
+ "summary": {
+  "value": "You will join Launchpad Studio as a Product Designer on a 12-month contract starting 4 January 2027. You will be paid a monthly fee of GBP 4,800, and a completion bonus may be paid depending on how the year goes for the company. You may occasionally be asked to put in extra time ahead of big launches",
+  "confidence": 0.9707245200151877,
+  "source": "generated"
+ },
+ "email": {
+  "subject": "Clarification regarding Product Designer offer",
+  "body": "Dear Hannah,\n\nThank you for the offer. I have a few questions regarding the terms:\n\n1. Regarding the completion bonus, is the amount determined at management's discretion?\n2. Regarding the expectation of 40 hours a week, will extra time put in ahead of big launches be paid?\n\nBest regards,\nTomás",
+  "to": "hannah@launchpad.example"
+ },
+ "verify": {
+  "model": "clocked-1.0",
+  "grounded": 0.991,
+  "ungrounded": 0.009,
+  "verdict": "grounded",
+  "threshold": 0.6,
+  "instructions_used": "custom",
+  "documents": [
+   {
+    "id": "offer",
+    "share": 1,
+    "share_of_answer": 0.991,
+    "claims": [
+     0,
+     1,
+     2
+    ]
+   }
+  ],
+  "claims": [
+   {
+    "claim": "You will join Launchpad Studio as a Product Designer on a 12-month contract starting 4 January 2027.",
+    "kind": "claim",
+    "counted": true,
+    "weight": 0.3344,
+    "supported": 0.9888,
+    "contradicted": 0.0031,
+    "not_stated": 0.0021,
+    "not_a_claim": 0.006,
+    "verdict": "supported",
+    "sources": {
+     "offer": 1
+    },
+    "source": "offer"
+   },
+   {
+    "claim": "You will be paid a monthly fee of GBP 4,800, and a completion bonus may be paid depending on how the year goes for the company.",
+    "kind": "claim",
+    "counted": true,
+    "weight": 0.4247,
+    "supported": 0.992,
+    "contradicted": 0.0029,
+    "not_stated": 0.002,
+    "not_a_claim": 0.0032,
+    "verdict": "supported",
+    "sources": {
+     "offer": 1
+    },
+    "source": "offer"
+   },
+   {
+    "claim": "You may occasionally be asked to put in extra time ahead of big launches",
+    "kind": "claim",
+    "counted": true,
+    "weight": 0.2408,
+    "supported": 0.9924,
+    "contradicted": 0.0025,
+    "not_stated": 0.0018,
+    "not_a_claim": 0.0033,
+    "verdict": "supported",
+    "sources": {
+     "offer": 1
+    },
+    "source": "offer"
+   },
+   {
+    "claim": "Dear Hannah,",
+    "kind": "acknowledgement",
+    "kinds": {
+     "acknowledgement": 0.6330815081225142,
+     "offer_or_question": 0.301875713063162,
+     "pointer": 0.025532087436719003,
+     "meta": 0.039510691377604816
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0117,
+    "contradicted": 0.0102,
+    "not_stated": 0.0339,
+    "not_a_claim": 0.9443,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Thank you for the offer.",
+    "kind": "acknowledgement",
+    "kinds": {
+     "acknowledgement": 0.7999091585792081,
+     "offer_or_question": 0.14778330890835828,
+     "pointer": 0.02205048790827519,
+     "meta": 0.030257044604158435
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0072,
+    "contradicted": 0.0061,
+    "not_stated": 0.0312,
+    "not_a_claim": 0.9556,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Regarding the completion bonus, is the amount determined at management's discretion?",
+    "kind": "offer_or_question",
+    "kinds": {
+     "acknowledgement": 0.008310837459031148,
+     "offer_or_question": 0.9838146812950723,
+     "pointer": 0.003604425664928339,
+     "meta": 0.00427005558096819
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0021,
+    "contradicted": 0.0021,
+    "not_stated": 0.0083,
+    "not_a_claim": 0.9875,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Regarding the expectation of 40 hours a week, will extra time put in ahead of big launches be paid?",
+    "kind": "offer_or_question",
+    "kinds": {
+     "acknowledgement": 0.02324644951309661,
+     "offer_or_question": 0.9653269482125486,
+     "pointer": 0.006338259428876159,
+     "meta": 0.005088342845478624
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0037,
+    "contradicted": 0.0045,
+    "not_stated": 0.0138,
+    "not_a_claim": 0.978,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Best regards,",
+    "kind": "acknowledgement",
+    "kinds": {
+     "acknowledgement": 0.5734216629130514,
+     "offer_or_question": 0.3558530493676453,
+     "pointer": 0.030914355716929923,
+     "meta": 0.03981093200237337
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0059,
+    "contradicted": 0.0058,
+    "not_stated": 0.0177,
+    "not_a_claim": 0.9706,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   }
+  ],
+  "unsupported_claims": [],
+  "not_claims": [
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "weakest_claim": {
+   "index": 0,
+   "supported": 0.9888
+  },
+  "timing": {
+   "read_ms": 80,
+   "total_ms": 84
+  }
+ },
+ "policy": {
+  "flag": 0.75,
+  "review": 0.35
+ },
+ "usage": [
+  {
+   "endpoint": "extract",
+   "credits": 5,
+   "modelMs": 124.432739,
+   "roundTripMs": 329
+  },
+  {
+   "endpoint": "decide",
+   "credits": 3,
+   "modelMs": 51.163265,
+   "roundTripMs": 409
+  },
+  {
+   "endpoint": "fill",
+   "credits": 16,
+   "modelMs": 391.839518,
+   "roundTripMs": 591
+  },
+  {
+   "endpoint": "grounding",
+   "credits": 4,
+   "modelMs": 75.739199,
+   "roundTripMs": 249
+  }
+ ],
+ "credits": 28,
+ "errors": [],
+ "recorded_at": "2026-10-31T17:36:49.168Z"
+}

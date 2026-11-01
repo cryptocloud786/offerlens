@@ -1,0 +1,66 @@
+{
+ "anonymized_text": "LAUNCHPAD STUDIO LTD\n<ADDRESS>\n\nEngagement letter – Product Designer (12-month contract)\n\nHi <PERSON>,\n\nFollowing our conversations, we'd like you to join Launchpad Studio as a Product Designer on a fixed-term contract of twelve months, starting 4 January 2027. You'll work remotely, with a team day in London roughly once a month.\n\nFees. We will pay a monthly fee of GBP 4,800, invoiced at the end of each month and payable within 45 days of invoice. As you'll be engaged as an independent contractor, you are responsible for your own tax and national insurance. Depending on how the year goes for the company, we may also pay a completion bonus at the end of the contract.\n\nTime. We expect around 40 hours a week. Ahead of big launches you may occasionally be asked to put in extra time, and we'll try to give time back afterwards where we can.\n\nEnding early. Either side can end this engagement with 30 days' written notice.\n\nOwnership of work. Designs, prototypes and other materials you produce for Launchpad under this engagement belong to Launchpad once the related invoice is paid. Work you do for other clients is yours, though you agree not to take on work for a direct competitor of Launchpad while this contract is running.\n\nEquipment. Launchpad will lend you a MacBook Pro for the duration of the contract, to be returned at the end.\n\nPlease let us know by 20 November 2026 whether you'd like to go ahead – just reply to <PERSON> (<EMAIL>).\n\nCheers,\n<PERSON>\nStudio Director\n",
+ "entities": [
+  {
+   "type": "address",
+   "value": "Unit 7, 41 Hackney Road, London E2 7NX",
+   "start": 21,
+   "end": 59,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "person",
+   "value": "Tomás",
+   "start": 122,
+   "end": 127,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "person",
+   "value": "Hannah Lee",
+   "start": 1460,
+   "end": 1470,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 2
+  },
+  {
+   "type": "email",
+   "value": "hannah@launchpad.example",
+   "start": 1472,
+   "end": 1496,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "person",
+   "value": "Hannah Lee",
+   "start": 1508,
+   "end": 1518,
+   "confidence": 1,
+   "source": "deny_list",
+   "mentions": 2
+  }
+ ],
+ "counts": {
+  "address": 1,
+  "person": 3,
+  "email": 1
+ },
+ "first_name_mentions_masked": 0,
+ "usage": [
+  {
+   "endpoint": "pii",
+   "credits": 6,
+   "modelMs": 147.971588,
+   "roundTripMs": 335
+  }
+ ],
+ "credits": 6,
+ "recorded_at": "2026-10-31T17:36:49.168Z"
+}
