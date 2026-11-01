@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OfferLens: read the fine print before you sign</title>
+  <meta name="description" content="Paste a job offer. OfferLens pulls out every term with its exact source, flags risky clauses with probabilities, drafts your questions to HR, and checks the draft against the offer. Built on Clocked." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='14' cy='14' r='9' fill='none' stroke='%231f5f4a' stroke-width='4'/%3E%3Cpath d='M21 21l7 7' stroke='%231f5f4a' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="./"><span class="logo" aria-hidden="true">◎</span> OfferLens</a>
+      <nav>
+        <a href="#how">How it works</a>
+        <a href="https://github.com/cryptocloud786/offerlens" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Read the fine print <em>before</em> you sign.</h1>
+      <p class="lede">Paste a job offer or contract. OfferLens pulls out every term with its exact place in the letter, flags clauses that put risk on you (with how sure it is), drafts your questions to HR, and checks that draft against the offer before you send it.</p>
+    </section>
+
+    <section class="input card">
+      <div class="input-head">
+        <label for="offer" class="h3">Your offer letter</label>
+        <div class="samples" role="group" aria-label="Load a sample">
+          <span class="muted">Try a sample:</span>
+          <button class="chip" data-sample="brightcart">Risky startup offer (India)</button>
+          <button class="chip" data-sample="launchpad">Contractor engagement (UK)</button>
+          <button class="chip" data-sample="northwind">Clean offer (US)</button>
+        </div>
+      </div>
+      <textarea id="offer" spellcheck="false" placeholder="Paste the full text of the offer letter or employment contract here…"></textarea>
+      <div class="input-foot">
+        <span class="muted small" id="charcount">0 characters</span>
+        <span class="muted small">Text is sent to Clocked for analysis and is not stored by OfferLens. Use the redacted copy below to share it.</span>
+        <button id="analyse" class="primary">Analyse offer</button>
+      </div>
+    </section>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+
+    <section id="results" hidden>
+      <div class="grid-top">
+        <article class="card verdict" id="verdict"></article>
+        <article class="card summary" id="summary"></article>
+      </div>
+
+      <div class="grid-main">
+        <div class="col">
+          <article class="card">
+            <div class="card-head"><h2>Clause checks</h2><span class="tag">Decide</span></div>
+            <p class="muted small">Each check is a yes/no question to Clocked Decide. OfferLens flags at ≥ <span data-policy="flag"></span>, asks you to review between <span data-policy="review"></span> and <span data-policy="flag"></span>. The quoted clause comes from Fill.</p>
+            <ul id="checks" class="checks"></ul>
+          </article>
+
+          <article class="card">
+            <div class="card-head"><h2>Key terms</h2><span class="tag">Extract</span></div>
+            <p class="muted small">Copied verbatim from the letter. Click a value to see it in context. Terms you would expect but the letter does not state are listed as questions.</p>
+            <table class="terms"><tbody id="terms"></tbody></table>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card sticky">
+            <div class="card-head"><h2>The letter</h2><span class="legend"><i class="lg term"></i>term <i class="lg flag"></i>red flag <i class="lg review"></i>review</span></div>
+            <div id="source" class="source"></div>
+          </article>
+        </div>
+      </div>
+
+      <article class="card" id="emailcard">
+        <div class="card-head"><h2>Questions for HR</h2><span class="tag">Fill</span><span class="tag">Verify</span></div>
+        <p class="muted small">Drafted by Fill from the risks and missing terms above. Every factual sentence is checked against the offer by Verify. Edit it, then re-check before sending.</p>
+        <div class="email">
+          <div class="row"><span class="lbl">To</span><span id="emailTo"></span></div>
+          <div class="row"><span class="lbl">Subject</span><input id="emailSubject" /></div>
+          <textarea id="emailBody" rows="14"></textarea>
+          <div class="email-actions">
+            <button id="recheck" class="secondary">Re-check my edits</button>
+            <button id="copyEmail" class="secondary">Copy</button>
+            <a id="mailto" class="secondary btn" href="#">Open in email app</a>
+            <span id="sendGate" class="gate"></span>
+          </div>
+          <ul id="claims" class="claims"></ul>
+        </div>
+      </article>
+
+      <article class="card" id="sharecard">
+        <div class="card-head"><h2>Get a second opinion</h2><span class="tag">Protect</span></div>
+        <p class="muted small">Make a copy you can send to a mentor or a forum: names, contact details, addresses and ID numbers are replaced, while the terms stay readable. Names found by Extract are passed to Protect so they are always caught.</p>
+        <button id="redact" class="secondary">Make a redacted copy</button>
+        <div id="redacted" hidden>
+          <div id="redactCounts" class="counts"></div>
+          <pre id="redactText" class="redacted"></pre>
+          <button id="copyRedacted" class="secondary">Copy redacted copy</button>
+        </div>
+      </article>
+
+      <details class="card under">
+        <summary><h2>Under the hood</h2></summary>
+        <table class="usage"><thead><tr><th>Endpoint</th><th>What it did here</th><th>Credits</th><th>Model ms</th><th>Round trip ms</th></tr></thead><tbody id="usage"></tbody></table>
+        <details><summary class="small">Raw response</summary><pre id="raw" class="raw"></pre></details>
+      </details>
+    </section>
+
+    <section id="how" class="how">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><b>Extract</b> reads 19 terms (pay, bonus, start date, notice, non-compete, early-exit cost, reply-by date…) verbatim, with character offsets and a normalised date or amount. A term the letter does not state comes back empty and becomes a question, never a guess.</li>
+        <li><b>Decide</b> answers nine clause checks as yes/no probabilities, plus the type of engagement and an overall risk score. OfferLens turns probabilities into policy: red flag, review, or clear.</li>
+        <li><b>Fill</b> builds the action record in one call: the exact sentence behind each flagged clause, a recommended next step, a three-sentence summary, and a polite email to HR with one question per risk and missing term.</li>
+        <li><b>Verify</b> splits the generated summary and email into claims and checks each against the letter. Contradicted or unsupported claims block the "ready to send" state until you fix them; edits are re-checked on demand.</li>
+        <li><b>Protect</b> makes a shareable copy with personal data replaced, seeded with the names Extract found.</li>
+      </ol>
+      <p class="muted small">OfferLens is a reading aid, not legal advice. Probabilities are model judgements; read the quoted clause yourself before acting on it.</p>
+    </section>
+  </main>
+
+  <footer class="wrap foot muted small">
+    Built for the Clocked Build Challenge 2026 · <a href="https://clocked.rezolve.ai" target="_blank" rel="noopener">Clocked by Rezolve.ai</a> · Sample letters are fictional.
+  </footer>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
