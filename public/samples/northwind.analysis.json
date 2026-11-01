@@ -1,0 +1,545 @@
+{
+ "terms": [
+  {
+   "key": "employer",
+   "label": "Employer",
+   "value": "Northwind Health Analytics, Inc",
+   "normalized": null,
+   "start": 0,
+   "end": 31,
+   "confidence": 0.943,
+   "expected": false
+  },
+  {
+   "key": "role",
+   "label": "Role",
+   "value": "Data Analyst II",
+   "normalized": null,
+   "start": 243,
+   "end": 258,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "manager",
+   "label": "Reports to",
+   "value": "Maria Chen",
+   "normalized": null,
+   "start": 303,
+   "end": 313,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "work_location",
+   "label": "Work location",
+   "value": "Seattle",
+   "normalized": null,
+   "start": 373,
+   "end": 380,
+   "confidence": 1,
+   "expected": true
+  },
+  {
+   "key": "base_salary",
+   "label": "Base pay",
+   "value": "$112,000 per year",
+   "normalized": null,
+   "start": 472,
+   "end": 489,
+   "confidence": 0.906,
+   "expected": true
+  },
+  {
+   "key": "variable_pay",
+   "label": "Bonus / variable pay",
+   "value": "10% of base salary",
+   "normalized": null,
+   "start": 638,
+   "end": 656,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "joining_bonus",
+   "label": "Joining / signing bonus",
+   "value": "$8,000",
+   "normalized": null,
+   "start": 557,
+   "end": 563,
+   "confidence": 0.564,
+   "expected": false
+  },
+  {
+   "key": "equity",
+   "label": "Equity",
+   "value": "options to purchase 4,000 shares of common stock",
+   "normalized": null,
+   "start": 787,
+   "end": 835,
+   "confidence": 0.165,
+   "expected": false
+  },
+  {
+   "key": "start_date",
+   "label": "Start date",
+   "value": "December 7, 2026",
+   "normalized": {
+    "value": "2026-12-07",
+    "source": "derived",
+    "rule": "date_month_name",
+    "confidence": 1
+   },
+   "start": 928,
+   "end": 944,
+   "confidence": 1,
+   "expected": true
+  },
+  {
+   "key": "probation",
+   "label": "Probation",
+   "value": null,
+   "normalized": null,
+   "start": null,
+   "end": null,
+   "confidence": 0.882,
+   "expected": false
+  },
+  {
+   "key": "notice_period",
+   "label": "Notice period",
+   "value": "two weeks' notice",
+   "normalized": null,
+   "start": 1229,
+   "end": 1246,
+   "confidence": 1,
+   "expected": true
+  },
+  {
+   "key": "non_compete",
+   "label": "Non-compete",
+   "value": "This offer does not include a non-compete agreement",
+   "normalized": null,
+   "start": 1485,
+   "end": 1536,
+   "confidence": 0.851,
+   "expected": false
+  },
+  {
+   "key": "early_exit_cost",
+   "label": "Early-exit cost",
+   "value": null,
+   "normalized": null,
+   "start": null,
+   "end": null,
+   "confidence": 0.872,
+   "expected": false
+  },
+  {
+   "key": "paid_leave",
+   "label": "Paid leave",
+   "value": "20 days",
+   "normalized": null,
+   "start": 987,
+   "end": 994,
+   "confidence": 1,
+   "expected": true
+  },
+  {
+   "key": "health_cover",
+   "label": "Health cover",
+   "value": "medical, dental and vision coverage",
+   "normalized": null,
+   "start": 1047,
+   "end": 1082,
+   "confidence": 1,
+   "expected": true
+  },
+  {
+   "key": "working_hours",
+   "label": "Working hours",
+   "value": "two in-office days per week",
+   "normalized": null,
+   "start": 394,
+   "end": 421,
+   "confidence": 0.997,
+   "expected": true
+  },
+  {
+   "key": "offer_deadline",
+   "label": "Reply by",
+   "value": "November 13, 2026",
+   "normalized": {
+    "value": "2026-11-13",
+    "source": "derived",
+    "rule": "date_month_name",
+    "confidence": 1
+   },
+   "start": 1573,
+   "end": 1590,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "hr_contact",
+   "label": "Reply to",
+   "value": "Sam Rivera",
+   "normalized": null,
+   "start": 1606,
+   "end": 1616,
+   "confidence": 1,
+   "expected": false
+  },
+  {
+   "key": "hr_email",
+   "label": "Reply email",
+   "value": "sam.rivera@northwind.example",
+   "normalized": null,
+   "start": 1637,
+   "end": 1665,
+   "confidence": 1,
+   "expected": false
+  }
+ ],
+ "checks": [
+  {
+   "key": "ip_overreach",
+   "label": "IP clause covers your own time",
+   "why": "This can capture side projects and open-source work. Ask for a personal-time carve-out.",
+   "p": 0.0447,
+   "band": "clear"
+  },
+  {
+   "key": "discretionary_pay",
+   "label": "Pay at management's discretion",
+   "why": "Treat discretionary pay as zero when comparing offers, unless the criteria are written down.",
+   "p": 0.0055,
+   "band": "clear"
+  },
+  {
+   "key": "notice_imbalance",
+   "label": "One-sided notice",
+   "why": "Long one-sided notice slows your next move and weakens your negotiating position.",
+   "p": 0.0046,
+   "band": "clear"
+  },
+  {
+   "key": "extendable_probation",
+   "label": "Open-ended probation",
+   "why": "Probation is when you are easiest to let go. Ask for a fixed maximum and fair notice.",
+   "p": 0.0042,
+   "band": "clear"
+  },
+  {
+   "key": "one_sided_changes",
+   "label": "Employer can change terms at will",
+   "why": "A unilateral-change clause means the numbers you sign today are not guaranteed.",
+   "p": 0.004,
+   "band": "clear"
+  },
+  {
+   "key": "broad_non_compete",
+   "label": "Broad non-compete",
+   "why": "A wide non-compete can block your next job. Ask to narrow its length, scope and geography.",
+   "p": 0.0035,
+   "band": "clear"
+  },
+  {
+   "key": "early_exit_penalty",
+   "label": "Pay to leave early",
+   "why": "Bonds and clawbacks make leaving expensive. Know the exact amount and whether it reduces over time.",
+   "p": 0.0032,
+   "band": "clear"
+  },
+  {
+   "key": "unpaid_extra_hours",
+   "label": "Unpaid extra hours",
+   "why": "Open-ended unpaid hours change your effective pay. Ask how often and whether there is comp-off.",
+   "p": 0.0023,
+   "band": "clear"
+  },
+  {
+   "key": "transfer_at_will",
+   "label": "Transfer anywhere",
+   "why": "If location matters to you, ask for it to be fixed in writing or for relocation support.",
+   "p": 0.0022,
+   "band": "clear"
+  }
+ ],
+ "employment": {
+  "type": "choice",
+  "choice": "permanent",
+  "probabilities": {
+   "permanent": 0.9953,
+   "fixed_term": 0.0013,
+   "internship": 0.0011,
+   "contractor": 0.0011,
+   "not_established": 0.0012
+  },
+  "confidence": 0.9942
+ },
+ "risk": {
+  "type": "score",
+  "score": 0.0115,
+  "legend": {
+   "0": "Low: standard, candidate-friendly terms",
+   "1": "Moderate: a few clauses worth clarifying",
+   "2": "High: several clauses that shift significant risk onto the candidate",
+   "3": "Severe: terms that could trap or heavily penalise the candidate"
+  },
+  "probabilities": {
+   "0": 0.9936,
+   "1": 0.003,
+   "2": 0.0017,
+   "3": 0.0017
+  },
+  "confidence": 0.9914,
+  "levels": [
+   "Low: standard, candidate-friendly terms",
+   "Moderate: a few clauses worth clarifying",
+   "High: several clauses that shift significant risk onto the candidate",
+   "Severe: terms that could trap or heavily penalise the candidate"
+  ]
+ },
+ "next_step": {
+  "value": "Sign as is",
+  "confidence": 0.99,
+  "probabilities": {
+   "Sign as is": 0.9925018325653604,
+   "Sign after clarifying a few points": 0.0028416767607745193,
+   "Negotiate before signing": 0.00256319535619358,
+   "Get legal advice before signing": 0.002093295317671503
+  }
+ },
+ "summary": {
+  "value": "You are offered the full-time Data Analyst II position starting December 7, 2026, with a $112,000 annual base salary, an $8,000 signing bonus, and a 10% annual target bonus. The role is a hybrid position based in Seattle. Your employment is at-will",
+  "confidence": 0.9906822840703178,
+  "source": "generated"
+ },
+ "email": {
+  "subject": "Clarification regarding job offer",
+  "body": "Dear Sam Rivera,\n\nThank you for the offer for the Data Analyst II position. I have a few questions regarding the terms:\n\n1. Could you please provide more information regarding the written bonus plan mentioned in relation to the 10% annual target bonus?\n\nBest regards,\nDaniel Okafor",
+  "to": "sam.rivera@northwind.example"
+ },
+ "verify": {
+  "model": "clocked-1.0",
+  "grounded": 0.9929,
+  "ungrounded": 0.0071,
+  "verdict": "grounded",
+  "threshold": 0.6,
+  "instructions_used": "custom",
+  "documents": [
+   {
+    "id": "offer",
+    "share": 1,
+    "share_of_answer": 0.9929,
+    "claims": [
+     0,
+     1,
+     2
+    ]
+   }
+  ],
+  "claims": [
+   {
+    "claim": "You are offered the full-time Data Analyst II position starting December 7, 2026, with a $112,000 annual base salary, an $8,000 signing bonus, and a 10% annual target bonus.",
+    "kind": "claim",
+    "counted": true,
+    "weight": 0.7033,
+    "supported": 0.9937,
+    "contradicted": 0.0022,
+    "not_stated": 0.0017,
+    "not_a_claim": 0.0023,
+    "verdict": "supported",
+    "sources": {
+     "offer": 1
+    },
+    "source": "offer"
+   },
+   {
+    "claim": "The role is a hybrid position based in Seattle.",
+    "kind": "claim",
+    "counted": true,
+    "weight": 0.1911,
+    "supported": 0.9904,
+    "contradicted": 0.0032,
+    "not_stated": 0.0023,
+    "not_a_claim": 0.0041,
+    "verdict": "supported",
+    "sources": {
+     "offer": 1
+    },
+    "source": "offer"
+   },
+   {
+    "claim": "Your employment is at-will",
+    "kind": "claim",
+    "counted": true,
+    "weight": 0.1057,
+    "supported": 0.992,
+    "contradicted": 0.0028,
+    "not_stated": 0.0021,
+    "not_a_claim": 0.003,
+    "verdict": "supported",
+    "sources": {
+     "offer": 1
+    },
+    "source": "offer"
+   },
+   {
+    "claim": "Dear Sam Rivera,",
+    "kind": "acknowledgement",
+    "kinds": {
+     "acknowledgement": 0.8408903986506902,
+     "offer_or_question": 0.10523969761491246,
+     "pointer": 0.021551158388744926,
+     "meta": 0.032318745345652475
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0137,
+    "contradicted": 0.0422,
+    "not_stated": 0.1799,
+    "not_a_claim": 0.7642,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Thank you for the offer for the Data Analyst II position.",
+    "kind": "acknowledgement",
+    "kinds": {
+     "acknowledgement": 0.5014488430752636,
+     "offer_or_question": 0.4620625438137828,
+     "pointer": 0.015963834927945925,
+     "meta": 0.020524778183007672
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.005,
+    "contradicted": 0.0057,
+    "not_stated": 0.0483,
+    "not_a_claim": 0.9411,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Could you please provide more information regarding the written bonus plan mentioned in relation to the 10% annual target bonus?",
+    "kind": "offer_or_question",
+    "kinds": {
+     "acknowledgement": 0.02185379067740876,
+     "offer_or_question": 0.9688467324436975,
+     "pointer": 0.005481615998804184,
+     "meta": 0.0038178608800895995
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0015,
+    "contradicted": 0.0016,
+    "not_stated": 0.0053,
+    "not_a_claim": 0.9916,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Best regards,",
+    "kind": "acknowledgement",
+    "kinds": {
+     "acknowledgement": 0.5433550672993249,
+     "offer_or_question": 0.3646978576168719,
+     "pointer": 0.03952977632854158,
+     "meta": 0.05241729875526157
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0069,
+    "contradicted": 0.0086,
+    "not_stated": 0.039,
+    "not_a_claim": 0.9455,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   },
+   {
+    "claim": "Daniel Okafor",
+    "kind": "acknowledgement",
+    "kinds": {
+     "acknowledgement": 0.8869674136762219,
+     "offer_or_question": 0.048917528427677597,
+     "pointer": 0.02361084968914884,
+     "meta": 0.040504208206951664
+    },
+    "counted": false,
+    "weight": 0,
+    "supported": 0.0532,
+    "contradicted": 0.0271,
+    "not_stated": 0.2902,
+    "not_a_claim": 0.6295,
+    "verdict": "not_a_claim",
+    "sources": {
+     "offer": 1
+    },
+    "source": null
+   }
+  ],
+  "unsupported_claims": [],
+  "not_claims": [
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "weakest_claim": {
+   "index": 1,
+   "supported": 0.9904
+  },
+  "timing": {
+   "read_ms": 128,
+   "total_ms": 130
+  }
+ },
+ "policy": {
+  "flag": 0.75,
+  "review": 0.35
+ },
+ "usage": [
+  {
+   "endpoint": "extract",
+   "credits": 4,
+   "modelMs": 95.894882,
+   "roundTripMs": 318
+  },
+  {
+   "endpoint": "decide",
+   "credits": 3,
+   "modelMs": 50.847519,
+   "roundTripMs": 442
+  },
+  {
+   "endpoint": "fill",
+   "credits": 16,
+   "modelMs": 380.16896,
+   "roundTripMs": 1217
+  },
+  {
+   "endpoint": "grounding",
+   "credits": 4,
+   "modelMs": 76.682177,
+   "roundTripMs": 301
+  }
+ ],
+ "credits": 27,
+ "errors": [],
+ "recorded_at": "2026-10-31T17:36:47.398Z"
+}

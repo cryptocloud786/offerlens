@@ -1,0 +1,112 @@
+{
+ "anonymized_text": "Northwind Health Analytics, Inc.\n<ADDRESS>\n\nOctober 30, 2026\n\n<PERSON>\n<ADDRESS>\n<EMAIL>\n\nDear <PERSON>,\n\nI am delighted to offer you the full-time position of Data Analyst II on the Clinical Insights team, reporting to <PERSON>, Director of Analytics. This is a hybrid role based in our <ADDRESS> office, with two in-office days per week.\n\nCompensation: Your starting base salary will be $112,000 per year, paid bi-weekly. You will also receive a one-time signing bonus of $8,000, payable within 30 days of your start date, and an annual target bonus of 10% of base salary based on company and individual performance under the written bonus plan.\n\nEquity: Subject to board approval, you will be granted options to purchase 4,000 shares of common stock, vesting over four years with a one-year cliff.\n\nStart date: Your anticipated start date is December 7, 2026.\n\nTime off and benefits: You will receive 20 days of paid time off per year plus 10 company holidays, medical, dental and vision coverage starting on your first day, and a 401(k) plan with a 4% company match.\n\nEmployment relationship: Your employment is at-will. We ask that you give two weeks' notice if you decide to leave. You will be asked to sign our standard Confidentiality and Invention Assignment Agreement, which excludes inventions you develop entirely on your own time without company equipment, consistent with Washington law. This offer does not include a non-compete agreement.\n\nPlease confirm your acceptance by November 13, 2026 by replying to <PERSON>, Talent Partner, at <EMAIL>.\n\nWarm regards,\n<PERSON>\nDirector of Analytics\n",
+ "entities": [
+  {
+   "type": "address",
+   "value": "220 Pine Street, Suite 400, Seattle, WA 98101",
+   "start": 33,
+   "end": 78,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "person",
+   "value": "Daniel Okafor",
+   "start": 98,
+   "end": 111,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 2
+  },
+  {
+   "type": "address",
+   "value": "1418 Alder Avenue, Tacoma, WA 98405",
+   "start": 112,
+   "end": 147,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "email",
+   "value": "daniel.okafor@example.org",
+   "start": 148,
+   "end": 173,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "person",
+   "value": "Daniel",
+   "start": 180,
+   "end": 186,
+   "confidence": 1,
+   "source": "mention",
+   "form": "first",
+   "variant_of": "Daniel Okafor"
+  },
+  {
+   "type": "person",
+   "value": "Maria Chen",
+   "start": 303,
+   "end": 313,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 2
+  },
+  {
+   "type": "address",
+   "value": "Seattle",
+   "start": 373,
+   "end": 380,
+   "confidence": 0.997,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "person",
+   "value": "Sam Rivera",
+   "start": 1606,
+   "end": 1616,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "email",
+   "value": "sam.rivera@northwind.example",
+   "start": 1637,
+   "end": 1665,
+   "confidence": 1,
+   "source": "model",
+   "mentions": 1
+  },
+  {
+   "type": "person",
+   "value": "Maria Chen",
+   "start": 1682,
+   "end": 1692,
+   "confidence": 1,
+   "source": "deny_list",
+   "mentions": 2
+  }
+ ],
+ "counts": {
+  "address": 3,
+  "person": 5,
+  "email": 2
+ },
+ "first_name_mentions_masked": 0,
+ "usage": [
+  {
+   "endpoint": "pii",
+   "credits": 13,
+   "modelMs": 303.767638,
+   "roundTripMs": 511
+  }
+ ],
+ "credits": 13,
+ "recorded_at": "2026-10-31T17:36:47.398Z"
+}
